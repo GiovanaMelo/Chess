@@ -288,8 +288,6 @@ namespace xadrez
             colocarNovaPeca('g', 7, new Peao(tab, Cor.Verde));
             colocarNovaPeca('h', 7, new Peao(tab, Cor.Verde));
 
-            colocarNovaPeca('c', 4, new Bispo(tab, Cor.Amarelo));
-            colocarNovaPeca('g', 4, new Dama(tab, Cor.Verde));
 
         }
     }
