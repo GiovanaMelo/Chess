@@ -28,49 +28,53 @@ namespace xadrez
             Posicao pos = new Posicao(0, 0);
 
             //NO
-            posicao.definirValores(posicao.linha - 1, posicao.coluna - 1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
             while(tab.posicaoValida(pos) && podeMover(pos))
             {
-                mat[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
                 if(tab.peca(pos) != null && tab.peca(pos).cor != cor)
                 {
                     break;
                 }
                 pos.definirValores(pos.linha - 1, pos.coluna - 1);
+                
             }
             //NE
-            posicao.definirValores(posicao.linha - 1, posicao.coluna + 1);
+            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
-                mat[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                 {
                     break;
                 }
                 pos.definirValores(pos.linha - 1, pos.coluna + 1);
+               
             }
 
             //SE
-            posicao.definirValores(posicao.linha + 1, posicao.coluna + 1);
+            pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
-                mat[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                 {
                     break;
                 }
-                pos.definirValores(pos.linha + 1, pos.coluna + 1);
+               pos.definirValores(pos.linha + 1, pos.coluna + 1);
+               
             }
             //SO
-            posicao.definirValores(posicao.linha + 1, posicao.coluna - 1);
+            pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
-                mat[posicao.linha, posicao.coluna] = true;
+                mat[pos.linha, pos.coluna] = true;
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                 {
                     break;
                 }
                 pos.definirValores(pos.linha + 1, pos.coluna - 1);
+
             }
 
             return mat;
