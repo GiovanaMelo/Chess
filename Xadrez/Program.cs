@@ -39,6 +39,10 @@ namespace Xadrez
                     {
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
+                    }catch(Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                        Console.ReadLine();
                     }
                    }
                 Console.Clear();
